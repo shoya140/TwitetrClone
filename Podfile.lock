@@ -1,13 +1,16 @@
 PODS:
   - Bolts/Tasks (1.1.5)
+  - FlatUIKit (1.6.1)
   - Parse (1.7.2.2):
     - Bolts/Tasks (>= 1.1.5)
 
 DEPENDENCIES:
+  - FlatUIKit
   - Parse
 
 SPEC CHECKSUMS:
   Bolts: aac24961496d504aa56fc267cde95162a71bac39
+  FlatUIKit: c602127a0c4a347e0632b2c5aef5c8c5f386f2cf
   Parse: 6187586a80eb7b4960d755f85e1353148a611f87
 
 COCOAPODS: 0.36.4

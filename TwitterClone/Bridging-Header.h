@@ -11,6 +11,7 @@
 
 #import "Parse.h"
 #import "Bolts.h"
+#import "FlatUIKit.h"
 #import "Key.h"
 
 #endif

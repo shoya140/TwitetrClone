@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PDM-EJ-eQK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="TwitterClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,229 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-Lh-ML0" customClass="FUITextField">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7N2-WH-qQL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7N2-WH-qQL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7N2-WH-qQL"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ei2-K8-NI0" customClass="FUITextField">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfY-i6-gNZ" customClass="SIFlatButton" customModule="TwitterClone" customModuleProvider="target">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fCJ-wW-5Ha"/>
+                                </constraints>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="inverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.31078015250000002" green="0.67712721330000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fCJ-wW-5Ha"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="fCJ-wW-5Ha"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l41-vH-XXl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g3-Hz-wM6" customClass="SIFlatButton" customModule="TwitterClone" customModuleProvider="target">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CLu-Yo-5iH"/>
+                                </constraints>
+                                <state key="normal" title="新規登録">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="inverse" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                        <color key="value" red="0.31078015250000002" green="0.67712721330000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CLu-Yo-5iH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="CLu-Yo-5iH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yLe-HL-gsV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gh3-Lh-ML0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="30" id="9rs-BT-kt2"/>
+                            <constraint firstItem="gh3-Lh-ML0" firstAttribute="centerX" secondItem="Ei2-K8-NI0" secondAttribute="centerX" id="BQz-EV-dAi"/>
+                            <constraint firstItem="1g3-Hz-wM6" firstAttribute="top" secondItem="FfY-i6-gNZ" secondAttribute="bottom" constant="5" id="NkO-w7-ahV"/>
+                            <constraint firstItem="FfY-i6-gNZ" firstAttribute="top" secondItem="Ei2-K8-NI0" secondAttribute="bottom" constant="15" id="PW0-rN-olo"/>
+                            <constraint firstAttribute="trailing" secondItem="FfY-i6-gNZ" secondAttribute="trailing" constant="30" id="PhT-fm-mi0"/>
+                            <constraint firstItem="gh3-Lh-ML0" firstAttribute="height" secondItem="Ei2-K8-NI0" secondAttribute="height" id="QJ6-HM-9gg"/>
+                            <constraint firstAttribute="centerX" secondItem="FfY-i6-gNZ" secondAttribute="centerX" id="T0d-fs-d2y"/>
+                            <constraint firstItem="Ei2-K8-NI0" firstAttribute="top" secondItem="gh3-Lh-ML0" secondAttribute="bottom" constant="5" id="YBu-z3-pdc"/>
+                            <constraint firstAttribute="centerX" secondItem="1g3-Hz-wM6" secondAttribute="centerX" id="c5z-Mk-7sw"/>
+                            <constraint firstAttribute="trailing" secondItem="gh3-Lh-ML0" secondAttribute="trailing" constant="30" id="jhR-hU-iBk"/>
+                            <constraint firstItem="gh3-Lh-ML0" firstAttribute="width" secondItem="Ei2-K8-NI0" secondAttribute="width" id="ptq-wf-0Gt"/>
+                            <constraint firstItem="FfY-i6-gNZ" firstAttribute="width" secondItem="1g3-Hz-wM6" secondAttribute="width" id="r9u-6x-pz7"/>
+                            <constraint firstItem="FfY-i6-gNZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="30" id="vvK-Zr-kV5"/>
+                            <constraint firstItem="gh3-Lh-ML0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="xyi-Wx-1Uz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gh3-Lh-ML0"/>
+                                <exclude reference="Ei2-K8-NI0"/>
+                                <exclude reference="FfY-i6-gNZ"/>
+                                <exclude reference="1g3-Hz-wM6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9rs-BT-kt2"/>
+                                <exclude reference="BQz-EV-dAi"/>
+                                <exclude reference="QJ6-HM-9gg"/>
+                                <exclude reference="jhR-hU-iBk"/>
+                                <exclude reference="ptq-wf-0Gt"/>
+                                <exclude reference="xyi-Wx-1Uz"/>
+                                <exclude reference="YBu-z3-pdc"/>
+                                <exclude reference="PW0-rN-olo"/>
+                                <exclude reference="PhT-fm-mi0"/>
+                                <exclude reference="T0d-fs-d2y"/>
+                                <exclude reference="r9u-6x-pz7"/>
+                                <exclude reference="vvK-Zr-kV5"/>
+                                <exclude reference="NkO-w7-ahV"/>
+                                <exclude reference="c5z-Mk-7sw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gh3-Lh-ML0"/>
+                                <include reference="Ei2-K8-NI0"/>
+                                <include reference="FfY-i6-gNZ"/>
+                                <include reference="1g3-Hz-wM6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9rs-BT-kt2"/>
+                                <include reference="BQz-EV-dAi"/>
+                                <include reference="QJ6-HM-9gg"/>
+                                <include reference="jhR-hU-iBk"/>
+                                <include reference="ptq-wf-0Gt"/>
+                                <include reference="xyi-Wx-1Uz"/>
+                                <include reference="YBu-z3-pdc"/>
+                                <include reference="PW0-rN-olo"/>
+                                <include reference="PhT-fm-mi0"/>
+                                <include reference="T0d-fs-d2y"/>
+                                <include reference="r9u-6x-pz7"/>
+                                <include reference="vvK-Zr-kV5"/>
+                                <include reference="NkO-w7-ahV"/>
+                                <include reference="c5z-Mk-7sw"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Ei2-K8-NI0" id="DEa-5k-dnU"/>
+                        <outlet property="usernameTextField" destination="gh3-Lh-ML0" id="AmZ-Aq-NpD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1054.5" y="939"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nPV-JF-oqa">
+            <objects>
+                <navigationController id="PDM-EJ-eQK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nXh-rl-t8s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L5E-rr-MuP" kind="relationship" relationship="rootViewController" id="FyC-AM-HjD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTE-Hr-MEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="267"/>
+        </scene>
+        <!--Time Line Table View Controller-->
+        <scene sceneID="zYZ-5h-jaT">
+            <objects>
+                <tableViewController storyboardIdentifier="TimeLineTableViewController" id="L5E-rr-MuP" customClass="TimeLineTableViewController" customModule="TwitterClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0VE-ZF-hPx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="fCE-xN-gjS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCE-xN-gjS" id="51I-58-n6j">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="L5E-rr-MuP" id="MSp-jV-WQ3"/>
+                            <outlet property="delegate" destination="L5E-rr-MuP" id="LOi-6d-zF2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="45M-Pr-am0">
+                        <barButtonItem key="leftBarButtonItem" title="logout" id="oUM-XT-Lrd">
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="L5E-rr-MuP" id="Sbe-Ch-pZH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="BNm-GZ-Jv1">
+                            <connections>
+                                <action selector="tweetButtonTapped:" destination="L5E-rr-MuP" id="E3V-TK-bsS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMq-dy-pbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054.5" y="267"/>
         </scene>
     </scenes>
 </document>

@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6C2F8281AFCFD8A003C116E /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C2F8271AFCFD8A003C116E /* TimeLineTableViewController.swift */; };
 		C6EA14F01AFC4E9A0078B807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EA14EF1AFC4E9A0078B807 /* AppDelegate.swift */; };
-		C6EA14F21AFC4E9A0078B807 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EA14F11AFC4E9A0078B807 /* ViewController.swift */; };
+		C6EA14F21AFC4E9A0078B807 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EA14F11AFC4E9A0078B807 /* LoginViewController.swift */; };
 		C6EA14F51AFC4E9A0078B807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6EA14F31AFC4E9A0078B807 /* Main.storyboard */; };
 		C6EA14F71AFC4E9A0078B807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6EA14F61AFC4E9A0078B807 /* Images.xcassets */; };
 		C6EA14FA1AFC4E9A0078B807 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EA14F81AFC4E9A0078B807 /* LaunchScreen.xib */; };
 		C6EA15061AFC4E9A0078B807 /* TwitterCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EA15051AFC4E9A0078B807 /* TwitterCloneTests.swift */; };
+		C6F9CB6B1AFC6C2300E6E36A /* SIFlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F9CB6A1AFC6C2300E6E36A /* SIFlatButton.swift */; };
 		FC885B643650BBE279C818AC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8030E20D0333C489131642 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +32,11 @@
 		4115C0357F3597935263FA5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6A8030E20D0333C489131642 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC30B07A31E732D9732B776 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C6C2F8271AFCFD8A003C116E /* TimeLineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewController.swift; sourceTree = "<group>"; };
 		C6EA14EA1AFC4E9A0078B807 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6EA14EE1AFC4E9A0078B807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6EA14EF1AFC4E9A0078B807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6EA14F11AFC4E9A0078B807 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6EA14F11AFC4E9A0078B807 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C6EA14F41AFC4E9A0078B807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6EA14F61AFC4E9A0078B807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C6EA14F91AFC4E9A0078B807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		C6EA15051AFC4E9A0078B807 /* TwitterCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCloneTests.swift; sourceTree = "<group>"; };
 		C6F9CB681AFC4FA100E6E36A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		C6F9CB691AFC4FF800E6E36A /* Key.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
+		C6F9CB6A1AFC6C2300E6E36A /* SIFlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIFlatButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +99,12 @@
 		C6EA14EC1AFC4E9A0078B807 /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				C6EA14F11AFC4E9A0078B807 /* LoginViewController.swift */,
+				C6C2F8271AFCFD8A003C116E /* TimeLineTableViewController.swift */,
+				C6F9CB6A1AFC6C2300E6E36A /* SIFlatButton.swift */,
 				C6EA14EF1AFC4E9A0078B807 /* AppDelegate.swift */,
 				C6F9CB681AFC4FA100E6E36A /* Bridging-Header.h */,
 				C6F9CB691AFC4FF800E6E36A /* Key.h */,
-				C6EA14F11AFC4E9A0078B807 /* ViewController.swift */,
 				C6EA14F31AFC4E9A0078B807 /* Main.storyboard */,
 				C6EA14F61AFC4E9A0078B807 /* Images.xcassets */,
 				C6EA14F81AFC4E9A0078B807 /* LaunchScreen.xib */,
@@ -275,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6EA14F21AFC4E9A0078B807 /* ViewController.swift in Sources */,
+				C6F9CB6B1AFC6C2300E6E36A /* SIFlatButton.swift in Sources */,
+				C6EA14F21AFC4E9A0078B807 /* LoginViewController.swift in Sources */,
+				C6C2F8281AFCFD8A003C116E /* TimeLineTableViewController.swift in Sources */,
 				C6EA14F01AFC4E9A0078B807 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
